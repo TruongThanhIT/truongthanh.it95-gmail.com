@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'kotlin'
+
+dependencies {
+    def domainDependencies = rootProject.ext.domainDependencies
+
+    implementation domainDependencies.javaxAnnotation
+    implementation domainDependencies.javaxInject
+    implementation domainDependencies.kotlin
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+repositories {
+    mavenCentral()
+}

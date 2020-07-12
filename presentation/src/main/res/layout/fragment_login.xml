@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary"
+        android:padding="50dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_cloud"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/user_name"
+        android:digits="0,1,2,3,4,5,6,7,8,9,qwertzuiopasdfghjklyxcvbnm"
+        android:hint="@string/user_name"
+        android:inputType="text"
+        android:maxLength="10"
+        android:paddingStart="@dimen/padding_start_end"
+        android:paddingTop="@dimen/padding_bottom_top"
+        android:paddingEnd="@dimen/padding_start_end"
+        android:paddingBottom="@dimen/padding_bottom_top"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/password"
+        android:digits="0,1,2,3,4,5,6,7,8,9,qwertzuiopasdfghjklyxcvbnm"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:maxLength="10"
+        android:paddingStart="@dimen/padding_start_end"
+        android:paddingTop="@dimen/padding_bottom_top"
+        android:paddingEnd="@dimen/padding_start_end"
+        android:paddingBottom="@dimen/padding_bottom_top"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_start_end"
+        android:layout_marginTop="@dimen/padding_bottom_top"
+        android:layout_marginEnd="@dimen/padding_start_end"
+        android:layout_marginBottom="@dimen/padding_bottom_top"
+        android:background="@color/colorAccent"
+        android:text="@string/login"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_size" />
+</LinearLayout>
