@@ -26,6 +26,8 @@ ext {
     lifecycleExtVersion = '2.2.0'
     materialVersion = '1.1.0'
     annotationVersion = '1.1.0'
+    rxJavaVersion = '2.2.15'
+    rxAndroidVersion = '2.1.1'
 
     presentationDependencies = [
             daggerCompiler    : "com.google.dagger:dagger-compiler:$daggerVersion",
@@ -38,13 +40,16 @@ ext {
             supportDesign     : "com.android.support:design:$supportDesignVersion",
             lifecycleExt      : "androidx.lifecycle:lifecycle-extensions:$lifecycleExtVersion",
             material          : "com.google.android.material:material:$materialVersion",
-            androidAnnotations: "androidx.annotation:annotation:$annotationVersion"
+            androidAnnotations: "androidx.annotation:annotation:$annotationVersion",
+            rxJava            : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
+            rxAndroid         : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
     ]
 
     domainDependencies = [
             javaxAnnotation: "javax.annotation:jsr250-api:$javaxAnnotationVersion",
             javaxInject    : "javax.inject:javax.inject:$javaxInjectVersion",
-            kotlin         : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+            kotlin         : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
+            rxJava        : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
     ]
 
     dataDependencies = [
