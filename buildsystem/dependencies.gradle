@@ -28,6 +28,7 @@ ext {
     annotationVersion = '1.1.0'
     rxJavaVersion = '2.2.15'
     rxAndroidVersion = '2.1.1'
+    gsonVersion = '2.8.6'
 
     presentationDependencies = [
             daggerCompiler    : "com.google.dagger:dagger-compiler:$daggerVersion",
@@ -43,13 +44,14 @@ ext {
             androidAnnotations: "androidx.annotation:annotation:$annotationVersion",
             rxJava            : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
             rxAndroid         : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+            gson              : "com.google.code.gson:gson:$gsonVersion"
     ]
 
     domainDependencies = [
             javaxAnnotation: "javax.annotation:jsr250-api:$javaxAnnotationVersion",
             javaxInject    : "javax.inject:javax.inject:$javaxInjectVersion",
             kotlin         : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
-            rxJava        : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
+            rxJava        : "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
     ]
 
     dataDependencies = [

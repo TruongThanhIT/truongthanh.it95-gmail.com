@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.thanht.data.cache.DataCache
-import com.thanht.domain.LoginUserCase
+import com.thanht.domain.login.LoginUserCase
 import com.thanht.domain.base.TaskSchedulers
 import javax.inject.Inject
 

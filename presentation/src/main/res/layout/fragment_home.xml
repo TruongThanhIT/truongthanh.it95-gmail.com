@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_color"
@@ -7,11 +8,35 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:text="@string/home"
+        android:layout_height="@dimen/actionBarSize"
+        android:background="@color/colorPrimaryDark"
         android:gravity="center"
-        android:textSize="@dimen/text_size"
-        android:textColor="@color/colorAccent" />
+        android:text="@string/select_province_city"
+        android:textColor="@color/bg_color"
+        android:textSize="@dimen/text_title" />
 
+    <EditText
+        android:id="@+id/et_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_start_end"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginEnd="@dimen/padding_start_end"
+        android:layout_marginBottom="@dimen/margin_top"
+        android:autofillHints=""
+        android:background="@drawable/bg_search"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="@dimen/padding_normal"
+        android:hint="@string/input_province_city"
+        android:inputType="text"
+        android:padding="@dimen/margin_top"
+        android:textColor="@color/bg_color"
+        android:textColorHint="@color/color_hint"
+        android:textSize="@dimen/text_size" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_city" />
 </LinearLayout>

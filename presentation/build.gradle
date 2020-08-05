@@ -57,4 +57,5 @@ dependencies {
     implementation presentationDependencies.fragmentKtx
     implementation presentationDependencies.rxJava
     implementation presentationDependencies.rxAndroid
+    implementation presentationDependencies.gson
 }

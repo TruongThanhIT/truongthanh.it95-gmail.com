@@ -2,6 +2,7 @@ package com.thanht.foodyentrytask.di.components
 
 import android.app.Application
 import com.thanht.data.cache.DataCache
+import com.thanht.data.city.CityDataSource
 import com.thanht.data.login.LoginDataSource
 import com.thanht.foodyentrytask.di.modules.AppModule
 import com.thanht.foodyentrytask.di.modules.DataStoredModule
@@ -20,7 +21,10 @@ interface AppComponent {
         fun build(): AppComponent
     }
 
+    // data source
     fun provideLoginDataSource(): LoginDataSource
+
+    fun provideCityDataSource(): CityDataSource
 
     fun provideApplication(): Application
 

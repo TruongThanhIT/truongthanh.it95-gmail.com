@@ -13,7 +13,7 @@ class LoginDataSource {
             )
             Result.Success(fakeUser)
         } else {
-            Result.Error(IOException("Login Failed"))
+            Result.Error(IOException("Invalid info"))
         }
     }
 }

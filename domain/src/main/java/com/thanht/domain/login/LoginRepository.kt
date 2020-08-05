@@ -1,4 +1,4 @@
-package com.thanht.domain
+package com.thanht.domain.login
 
 import com.thanht.domain.model.LoggedInUser
 import io.reactivex.Observable

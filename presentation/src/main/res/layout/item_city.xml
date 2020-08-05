@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/tv_city_name"
+    android:layout_height="wrap_content"
+    android:textColor="@color/colorAccent"
+    android:drawableStart="@drawable/ic_place"
+    android:drawablePadding="@dimen/padding_small"
+    android:paddingStart="@dimen/padding_normal"
+    android:paddingTop="@dimen/padding_bottom_top"
+    android:paddingEnd="@dimen/padding_start_end"
+    android:paddingBottom="@dimen/padding_bottom_top"
+    tools:text="Sa Dec" />
