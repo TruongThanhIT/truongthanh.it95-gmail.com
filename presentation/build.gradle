@@ -58,4 +58,8 @@ dependencies {
     implementation presentationDependencies.rxJava
     implementation presentationDependencies.rxAndroid
     implementation presentationDependencies.gson
+    implementation presentationDependencies.room
+    implementation presentationDependencies.roomRx
+    kapt           presentationDependencies.roomCompiler
+    implementation presentationDependencies.stetho
 }

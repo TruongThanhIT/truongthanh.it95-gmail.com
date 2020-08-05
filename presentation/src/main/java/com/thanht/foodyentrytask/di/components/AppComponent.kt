@@ -4,6 +4,7 @@ import android.app.Application
 import com.thanht.data.cache.DataCache
 import com.thanht.data.city.CityDataSource
 import com.thanht.data.login.LoginDataSource
+import com.thanht.domain.database.DatabaseManager
 import com.thanht.foodyentrytask.di.modules.AppModule
 import com.thanht.foodyentrytask.di.modules.DataStoredModule
 import com.thanht.foodyentrytask.di.scopes.ApplicationScope
@@ -29,4 +30,6 @@ interface AppComponent {
     fun provideApplication(): Application
 
     fun provideDataCache(): DataCache
+
+    fun provideDatabaseManager(): DatabaseManager
 }

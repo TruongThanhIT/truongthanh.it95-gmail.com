@@ -35,7 +35,7 @@ android {
 dependencies {
     def dataDependencies = rootProject.ext.dataDependencies
 
-    implementation project (':domain')
+    implementation project(':domain')
 
     implementation dataDependencies.javaxAnnotation
     implementation dataDependencies.javaxInject
@@ -46,7 +46,7 @@ dependencies {
     implementation dataDependencies.retrofitConverter
     implementation dataDependencies.kotlin
     implementation dataDependencies.room
-    implementation dataDependencies.roomRxJava
+    implementation dataDependencies.roomRx
     kapt           dataDependencies.roomCompiler
 }
 

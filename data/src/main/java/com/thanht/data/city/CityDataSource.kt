@@ -7,12 +7,12 @@ import com.thanht.data.util.JsonUtils
 import java.io.IOException
 import javax.inject.Inject
 
-class CityDataSource @Inject constructor(val context: Context) {
+class CityDataSource @Inject constructor(private val context: Context) {
 
-    fun getCityList(): Result<Collection<CityResponse>> {
+    fun getCityList(): Result<List<CityResponse>> {
         val jsonString = JsonUtils.getJSONData(context, "city.json")
-        val collectionType = object : TypeToken<Collection<CityResponse?>?>() {}.type
-        val cityResponses: Collection<CityResponse>? = JsonUtils.getGson().fromJson(jsonString, collectionType)
+        val collectionType = object : TypeToken<List<CityResponse?>?>() {}.type
+        val cityResponses: List<CityResponse>? = JsonUtils.getGson().fromJson(jsonString, collectionType)
         cityResponses?.let {
             return Result.Success(it)
         }

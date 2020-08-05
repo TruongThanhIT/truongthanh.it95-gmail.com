@@ -12,7 +12,7 @@ class CityRepositoryImpl @Inject constructor(private val dataSource: CityDataSou
     override fun getListCity(): Observable<List<CityModel>> {
         val result = dataSource.getCityList()
         if (result is Result.Success) {
-            return Observable.just(result.data.toList().toCityModelList())
+            return Observable.just(result.data.toCityModelList())
         }
         return Observable.error((result as Result.Error).exception)
     }
