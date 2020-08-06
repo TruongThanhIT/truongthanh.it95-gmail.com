@@ -12,28 +12,20 @@ import com.thanht.foodyentrytask.di.components.UserComponent
 
 class MyApplication : Application() {
 
+    val userComponent: UserComponent by lazy {
+        DaggerUserComponent.builder()
+            .appComponent(appComponent)
+            .build()
+    }
+
     private val appComponent: AppComponent by lazy {
         DaggerAppComponent.builder()
             .application(this)
             .build()
     }
 
-    private val userComponent: UserComponent by lazy {
-        DaggerUserComponent.builder()
-            .appComponent(appComponent)
-            .build()
-    }
-
     override fun onCreate() {
         super.onCreate()
         Stetho.initializeWithDefaults(this);
-    }
-
-    companion object {
-        fun applicationComponent(context: Context) =
-            (context.applicationContext as MyApplication).appComponent
-
-        fun userComponent(context: Context) =
-            (context.applicationContext as MyApplication).userComponent
     }
 }

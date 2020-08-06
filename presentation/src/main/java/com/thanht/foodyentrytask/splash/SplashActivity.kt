@@ -13,7 +13,7 @@ import javax.inject.Inject
 private const val DELAY_TIME = 2000L
 
 class SplashActivity : AppCompatActivity() {
-    private var handler: Handler? = null
+    private lateinit var handler: Handler
 
     @Inject
     lateinit var splashViewModel: SplashViewModel
@@ -25,11 +25,11 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         userComponent().inject(this)
         super.onCreate(savedInstanceState)
-        handler = Handler()
-        handler!!.postDelayed(runnable,
-            DELAY_TIME
-        )
-
+        handler = Handler().also {
+            it.postDelayed(runnable,
+                DELAY_TIME
+            )
+        }
         splashViewModel.splashState.observe(this, Observer {
             val splashState = it ?: return@Observer
             if (splashState is SplashState.HomeActivity) {
@@ -50,7 +50,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
-        handler?.removeCallbacks(runnable)
+        handler.removeCallbacks(runnable)
         super.onDestroy()
     }
 }

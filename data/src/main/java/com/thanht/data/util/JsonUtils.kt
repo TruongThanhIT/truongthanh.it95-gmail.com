@@ -24,12 +24,7 @@ object JsonUtils {
     }
 
     @Synchronized
-    fun getGson(): Gson {
-        if (gSon == null) {
-            gSon = Gson()
-        }
-        return gSon
-    }
+    fun getGson(): Gson = gSon
 
     fun getJSONData(context: Context, textFileName: String): String {
         var strJSON = ""

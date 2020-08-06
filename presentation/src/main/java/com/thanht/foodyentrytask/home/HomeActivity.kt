@@ -8,8 +8,10 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportFragmentManager.beginTransaction().add(android.R.id.content,
-            HomeFragment()
-        ).commit()
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction().add(android.R.id.content,
+                HomeFragment()
+            ).commit()
+        }
     }
 }

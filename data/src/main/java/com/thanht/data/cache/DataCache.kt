@@ -4,11 +4,11 @@ import android.content.Context
 import android.content.SharedPreferences
 import javax.inject.Inject
 
-const val FILE_NAME = "xml_cache"
-const val IS_USER_LOG_IN = "is_logged"
+private const val FILE_NAME = "xml_cache"
+private const val IS_USER_LOG_IN = "is_logged"
 class DataCache @Inject constructor(context: Context) {
 
-    private var sharedPreferences: SharedPreferences =
+    private val sharedPreferences: SharedPreferences =
         context.getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE)
 
     fun setIsUserLogIn(isLogged: Boolean) {

@@ -2,8 +2,7 @@ package com.thanht.data.login
 
 import com.thanht.data.Result
 import com.thanht.domain.model.LoggedInUser
-import java.io.IOException
-import java.util.UUID
+import java.util.*
 
 class LoginDataSource {
     fun login(userName: String, password: String): Result<LoggedInUser> {
@@ -13,7 +12,7 @@ class LoginDataSource {
             )
             Result.Success(fakeUser)
         } else {
-            Result.Error(IOException("Invalid info"))
+            Result.Error(IllegalArgumentException("Invalid info"))
         }
     }
 }
